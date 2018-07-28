@@ -1,0 +1,12 @@
+<div bp="grid 6 4@md 2@1g">
+  <a *ngFor="let i of item | async" [routerLink]="['./', i.id]" class="item-media">
+    <i [class]="' sprite sprite-' + i.id"></i>
+    <div class="item--media_content">
+      {{i.name}}<span bp="float-right">#{{i.id}}</span><br/>
+      <div>Class: {{i.class}}</div>
+      <div>Traits: {{i.traits[0]}}</div>
+      <div>Type: {{i.type}}</div>
+    </div>
+    <p></p>
+  </a>
+</div>
